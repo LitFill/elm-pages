@@ -91,6 +91,8 @@ pages =
     , Page "/pages/text.html" "Text"
     ]
 
+domain : String
+domain = "/elm-pages"
 
 viewPage : Page -> E.Element Msg
 viewPage p =
@@ -98,7 +100,7 @@ viewPage p =
     --     { url = p.url
     --     , label = E.text p.title
     --     }
-    E.html <| a [ href p.url ] [ text p.title ]
+    E.html <| a [ href <| domain ++ p.url ] [ text p.title ]
 
 
 viewPages : List Page -> List (E.Element Msg)
