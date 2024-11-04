@@ -13979,23 +13979,22 @@ var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$ul = _VirtualDom_node('ul');
 var $author$project$Index$viewPages2 = function (pgs) {
 	var viewP = function (p) {
-		return $mdgriffith$elm_ui$Element$html(
-			A2(
-				$elm$html$Html$li,
-				_List_Nil,
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$a,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$href(p.dG)
-							]),
-						_List_fromArray(
-							[
-								$elm$html$Html$text(p.aQ)
-							]))
-					])));
+		return A2(
+			$elm$html$Html$li,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$href(p.dG)
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text(p.aQ)
+						]))
+				]));
 	};
 	return A2(
 		$elm$html$Html$ul,
@@ -14003,20 +14002,7 @@ var $author$project$Index$viewPages2 = function (pgs) {
 			[
 				A2($elm$html$Html$Attributes$style, 'line-heigth', 'normal !important')
 			]),
-		_List_fromArray(
-			[
-				A2(
-				$mdgriffith$elm_ui$Element$layout,
-				_List_fromArray(
-					[
-						$mdgriffith$elm_ui$Element$spacing(10),
-						$mdgriffith$elm_ui$Element$padding(7)
-					]),
-				A2(
-					$mdgriffith$elm_ui$Element$column,
-					_List_Nil,
-					A2($elm$core$List$map, viewP, pgs)))
-			]));
+		A2($elm$core$List$map, viewP, pgs));
 };
 var $elm$time$Time$flooredDiv = F2(
 	function (numerator, denominator) {
