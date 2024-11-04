@@ -13969,6 +13969,7 @@ var $author$project$Index$pages = _List_fromArray(
 		A2($author$project$Index$Page, '/pages/text.html', 'Text')
 	]);
 var $elm$html$Html$a = _VirtualDom_node('a');
+var $author$project$Index$domain = '/elm-pages';
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -13988,7 +13989,8 @@ var $author$project$Index$viewPages2 = function (pgs) {
 					$elm$html$Html$a,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$href(p.dG)
+							$elm$html$Html$Attributes$href(
+							_Utils_ap($author$project$Index$domain, p.dG))
 						]),
 					_List_fromArray(
 						[

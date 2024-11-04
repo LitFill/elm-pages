@@ -91,8 +91,11 @@ pages =
     , Page "/pages/text.html" "Text"
     ]
 
+
 domain : String
-domain = "/elm-pages"
+domain =
+    "/elm-pages"
+
 
 viewPage : Page -> E.Element Msg
 viewPage p =
@@ -100,7 +103,7 @@ viewPage p =
     --     { url = p.url
     --     , label = E.text p.title
     --     }
-    E.html <| a [ href <| domain ++ p.url ] [ text p.title ]
+    E.html <| a [ href p.url ] [ text p.title ]
 
 
 viewPages : List Page -> List (E.Element Msg)
@@ -112,7 +115,7 @@ viewPages2 : List Page -> Html msg
 viewPages2 pgs =
     let
         viewP p =
-            li [] [ a [ href p.url ] [ text p.title ] ]
+            li [] [ a [ href <| domain ++ p.url ] [ text p.title ] ]
     in
     ul [ style "line-heigth" "normal !important" ] <| List.map viewP pgs
 
